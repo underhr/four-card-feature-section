@@ -1,3 +1,4 @@
+/* font styles */
 @font-face {
     font-family: poppinsextralight;
     src: url(fonts/Poppins/Poppins-ExtraLight.ttf);
@@ -15,6 +16,7 @@ body{
     font-family: poppins;
 }
 
+/* text styles */
 #text{
     text-align:center;
     max-width:540px;
@@ -37,7 +39,6 @@ h1{
     letter-spacing: .25px;
     font-family: poppinssemibold;
     margin:0;
-    font-weight:600;
 }
 
 h3{
@@ -50,36 +51,69 @@ h3{
 p{
     font-family:poppinsregular;
     font-size:15px;
-    line-height: 25px;
+    line-height: 24px;
     letter-spacing: 0.1px;
     font-weight:200;
     color:#4D4F62;
 }
 
+/* container styles */
 #container{
-    display:grid;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     gap:30px;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
 .square{
     width:350px;
+    height:250px;
     border-radius:10px;
     box-shadow: #83A6D2 10px 10px 10px 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding:32px;
+    padding-bottom:0px;
+    display:flex;
+    flex-direction: column;
 }
 
-#supervisor{
-    grid-column: 1/3;
-    grid-row: 
+#centerFlex{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
 }
 
 img{
-    float:right;
     width:64px;
     height:64px;
+    align-self:flex-end;
+    float:right;
 }
 
-@media only screen and (max-width:375px){
+@media only screen and (max-width:1000px){
+    /* text styles */
+    #text{
+        max-width:311px;
+    }
 
+    h2{
+        font-size:22px;
+        letter-spacing:.17px;
+    }
+    
+    h1{
+        font-size:23px;
+        letter-spacing: .17px;
+    }
+
+    /* container styles */
+    #container{
+        flex-direction:column;
+    }
+    .square{
+        width:311px;
+        height:222px;
+    }
 }
